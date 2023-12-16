@@ -37,7 +37,7 @@ const removeMovieById = (req, res, next) => {
         throw new ErrorMovieDelete('Вы не можете удалить не свой фильм');
       }
 
-      Movie.findByIdAndDelete(req.params.movieId).select('-owner')
+      return Movie.findByIdAndDelete(req.params.movieId).select('-owner')
         .then((deletedMovie) => res.status(OK).send(deletedMovie));
     })
     .catch(next);
