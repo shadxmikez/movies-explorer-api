@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended"
+  ],
+  "rules": {
+    "func-names": "off",
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    /*"no-unreachable": [
+      "error",
+      {
+        "ignoreRestPaths": true
+      }
+    ],*/
+    "comma-dangle": [
+      0,
+      "always-multiline"
+    ],
+    "no-tabs": 0,
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id"
+        ]
+      }
+    ],
+    "eol-last": 0,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 0
+      }
+    ],
+    "no-console": "off"
+  }
+}
