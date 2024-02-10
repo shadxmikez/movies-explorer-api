@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const { errors } = require('celebrate');
 const cors = require('cors');
-const { PORT, DB } = require('./utils/setup');
 const centralizedErrors = require('./middlewares/centralized-errors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const limiter = require('./middlewares/ip-limiter');
@@ -12,6 +11,12 @@ const limiter = require('./middlewares/ip-limiter');
 const router = require('./routes/index');
 
 const app = express();
+
+const {
+  PORT = 3000,
+  DB = 'mongodb://localhost:27017/diplomdb',
+} = process.env;
+
 app.use(express.json());
 app.use(helmet());
 app.use(requestLogger);
