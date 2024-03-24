@@ -1,4 +1,3 @@
 # movies-explorer-api
 
-## API: https://api.shadxmikez.nomoredomainsmonster.ru
-## IP 51.250.6.102
+The server part of the application, many interesting solutions are used here. Take a look at `/controllers`, `/models`, `/middlewaresroutes`, `/errors` and more.
